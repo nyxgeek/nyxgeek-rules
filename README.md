@@ -12,6 +12,8 @@ INDEX OF RULES
 -------------------------------------
 [List.Rules:MostPopularUTF]
 
+[List.Rules:AddASCIIEverywhere]
+
 [List.Rules:AddUTF8Everywhere]
 
 [List.Rules:SwapCharactersExtended]
