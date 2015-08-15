@@ -3,19 +3,24 @@ Custom rules for John the Ripper
 
 INSTALLATION & NOTES
 ------------------------------------
-Copy nyxgeek.conf to your john/run folder. Add the following line to your john.conf file:
+Copy nyxgeek.conf and all-utf8.conf to your john/run folder. I have separated the giant all-utf8.conf rule into its own rules file since it is nearly 4700 lines. 
+
+Add the following lines to your john.conf file:
 ```
 .include "$JOHN/nyxgeek.conf"
+.include "$JOHN/all-utf8.conf"
 ```
+
+
 Be sure to use --internal-encoding=UTF-8 to ensure that these work.
 
 INDEX OF RULES
 -------------------------------------
 [List.Rules:MostPopularUTF]
 
-[List.Rules:AddASCIIEverywhere]
+[List.Rules:Add_ASCII_Everywhere]
 
-[List.Rules:AddUTF8Everywhere]
+[List.Rules:Add_ISO-8859-1_Everywhere]
 
 [List.Rules:SwapCharactersExtended]
 
@@ -31,4 +36,12 @@ INDEX OF RULES
 
 [List.Rules:AddPasswordEverywhere]
 
-[List.Rules:RemoveCharacterEverywhere]
+[List.Rules:Add_CyrillicUTF8_Everywhere]
+
+[List.Rules:Add_GreekUTF8_Everywhere]
+
+[List.Rules:Add_ArabicUTF8_Everywhere]
+
+[List.Rules:Add_ALL_UTF8_Everywhere]
+
+
