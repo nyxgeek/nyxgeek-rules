@@ -7,7 +7,7 @@ Copy nyxgeek.conf to your john/run folder. Add the following line to your john.c
 ```
 .include "$JOHN/nyxgeek.conf"
 ```
-Be sure to use --encoding=utf8 or --encoding=iso-8859-2 etc to ensure that these work.
+Be sure to use --internal-encoding=UTF-8 to ensure that these work.
 
 INDEX OF RULES
 -------------------------------------
