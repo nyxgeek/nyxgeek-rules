@@ -16,32 +16,36 @@ Be sure to use --internal-encoding=UTF-8 to ensure that these work.
 
 INDEX OF RULES
 -------------------------------------
-[List.Rules:MostPopularUTF]
+**MostPopularUTF** - inserts most popular UTF chars at every char position
 
-[List.Rules:Add_ASCII_Everywhere]
+**Add_ASCII_Everywhere** - inserts all ASCII chars at every char position
 
-[List.Rules:Add_ISO-8859-1_Everywhere]
+**Add_ISO-8859-1_Everywhere** - inserts all extended chars at every char position
 
-[List.Rules:SwapCharactersExtended]
+**SwapCharactersExtended** - replaces many ASCII chars with extended versions. ie, o with ø
 
-[List.Rules:PrependYears2000s]
+**PrependYears2000s** - prepends words with 2000-2099
 
-[List.Rules:AppendYears2000s]
+**AppendYears2000s** - appends words with 2000-2099
 
-[List.Rules:Add2000sEverywhere]
+**Add2000sEverywhere** - inserts 2000-2099 at all char positions
 
-[List.Rules:AddLinkedInEverywhere_FULL]
+**OverWriteAllPositionsASCII** - overwrites every char position with all ASCII chars
 
-[List.Rules:AddLinkedInEverywhere_FAST]
+**AddLinkedInEverywhere_FULL** - inserts permutations of 'linkedin' everywhere (made for linkedin dump)
 
-[List.Rules:AddPasswordEverywhere]
+**AddLinkedInEverywhere_FAST** - slightly smaller version of the above
 
-[List.Rules:Add_CyrillicUTF8_Everywhere]
+**AddPasswordEverywhere** - inserts permutations of 'password' everywhere
 
-[List.Rules:Add_GreekUTF8_Everywhere]
+**Add_Password_Everywhere_ALL_LANGUAGES** - inserts 'password' in over 90 languages everywhere
 
-[List.Rules:Add_ArabicUTF8_Everywhere]
+**Add_CyrillicUTF8_Everywhere** - inserts Cyrillic chars at every char position
 
-[List.Rules:Add_ALL_UTF8_Everywhere]
+**Add_GreekUTF8_Everywhere** - inserts Greek chars at every char position
+
+**Add_ArabicUTF8_Everywhere** - inserts Arabic chars at every char position
+
+**Add_ALL_UTF8_Everywhere** - inserts a lot of UTF chars at every char position
 
 
