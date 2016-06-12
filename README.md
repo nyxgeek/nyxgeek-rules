@@ -12,7 +12,9 @@ Add the following lines to your john.conf file:
 ```
 
 
-Be sure to use --internal-encoding=UTF-8 to ensure that these work.
+**NOTE:** Depending on what version of John you're using, you may need to specify either "--internal-encoding" or "internal-codepage" parameters, or edit the john.conf file to set the DefaultInternalEncoding.  If these rules aren't working correctly for you try "--internal-encoding=UTF-8" or "--internal-codepage=latin1".
+
+
 
 INDEX OF RULES
 -------------------------------------
@@ -24,11 +26,11 @@ INDEX OF RULES
 
 **SwapCharactersExtended** - replaces many ASCII chars with extended versions. ie, o with ø
 
-**PrependYears2000s** - prepends words with 2000-2099
+**PrependYears2000s** - prepends words with 2000-2019
 
-**AppendYears2000s** - appends words with 2000-2099
+**AppendYears2000s** - appends words with 2000-2019
 
-**Add2000sEverywhere** - inserts 2000-2099 at all char positions
+**Add2000sEverywhere** - inserts 2000-2019 at all char positions
 
 **OverWriteAllPositionsASCII** - overwrites every char position with all ASCII chars
 
