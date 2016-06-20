@@ -38,6 +38,8 @@ INDEX OF RULES
 
 **AddLinkedInEverywhere_FAST** - slightly smaller version of the above
 
+**AddLinkedInEverywhere_BASIC** - fastest, most basic ASCII-only version of the above
+
 **AddPasswordEverywhere** - inserts permutations of 'password' everywhere
 
 **Add_Password_Everywhere_ALL_LANGUAGES** - inserts 'password' in over 90 languages everywhere
