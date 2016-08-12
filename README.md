@@ -24,7 +24,7 @@ INDEX OF RULES
 
 **Add_ISO-8859-1_Everywhere** - inserts all extended chars at every char position
 
-**SwapCharactersExtended** - replaces many ASCII chars with extended versions. ie, o with ø
+**SwapCharactersExtended** - replaces many ASCII chars with extended versions. ie, o with ø (requires latin1 codepage)
 
 **PrependYears2000s** - prepends words with 2000-2019
 
