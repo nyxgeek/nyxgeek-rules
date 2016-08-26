@@ -1,0 +1,52 @@
+# This is a modified version of the 'Policy' external filter that comes with John
+# The default is to match ONLY passwords that are 8 characters exactly. This just
+# allows for any passwords OVER 8 chars. You can use this in conjunction with
+# --max-len=10 to limit it to passwords 8-10 characters if you want to curtail
+# the max length
+
+
+[List.External:Policy8plus]
+int mask[0x100];
+
+void init()
+{
+        int c;
+
+        mask[0] = 0x100;
+        c = 1;
+        while (c < 0x100)
+                mask[c++] = 0x200;
+
+        c = 'a';
+        while (c <= 'z')
+                mask[c++] = 1;
+        c = 'A';
+        while (c <= 'Z')
+                mask[c++] = 2;
+        c = '0';
+        while (c <= '9')
+                mask[c++] = 4;
+}
+
+void filter()
+{
+        int i, seen;
+
+/*
+ * This loop ends when we see NUL (sets 0x100) or a disallowed character
+ * (sets 0x200).
+ */
+        i = -1; seen = 0;
+        while ((seen |= mask[word[++i]]) < 0x100)
+                continue;
+
+/*
+ * We should have seen at least one character of each type (which "add up"
+ * to 7) and then a NUL (adds 0x100), but not any other characters (would
+ * add 0x200).  The length must be 8.
+ */
+        if (seen != 0x107 || i < 8)
+                word = 0; // Does not conform to policy
+}
+
+
