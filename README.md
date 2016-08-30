@@ -18,6 +18,8 @@ Add the following lines to your john.conf file:
 
 INDEX OF RULES
 -------------------------------------
+**LongDoubleAddNum** - Does duplicate of base word and appends numbers/specials (fred -> FredFred03)
+
 **MostPopularUTF** - inserts most popular UTF chars at every char position
 
 **Add_ASCII_Everywhere** - inserts all ASCII chars at every char position
