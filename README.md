@@ -20,6 +20,8 @@ INDEX OF RULES
 -------------------------------------
 **LongDoubleAddNum** - Does duplicate of base word and appends numbers/specials (fred -> FredFred03)
 
+**MakeItBigger_Append** - Adds 4-8 of a single digit or symbol to the end of base word (fred -> Fred1111)
+
 **MostPopularUTF** - inserts most popular UTF chars at every char position
 
 **Add_ASCII_Everywhere** - inserts all ASCII chars at every char position
