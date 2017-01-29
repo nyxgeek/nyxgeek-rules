@@ -18,6 +18,10 @@ Add the following lines to your john.conf file:
 
 INDEX OF RULES
 -------------------------------------
+**MakeAddress_v1** - Create addresses from wordlist, eg: 31spoonerstreet, 31SpoonerSt)
+
+**MakeAddress_v2** - More address creation but with direction eg: 31Nspoonerst, 31nspoonerstreet
+
 **LongDoubleAddNum** - Does duplicate of base word and appends numbers/specials (fred -> FredFred03)
 
 **MakeItBigger_Append** - Adds 4-8 of a single digit or symbol to the end of base word (fred -> Fred1111)
