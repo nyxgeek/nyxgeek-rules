@@ -1,3 +1,49 @@
+# This is an external filter for AD complexity, with min-length set to 12. this is 
+# exactly the same as the one that comes with john except the min-length
+# Usually it isn't worth using this, but for REALLY slow hashes like kerberos tickets
+# it is faster.
+
+
+[List.External:Filter_Complex_Basic12]
+void filter()
+{
+    int i, c ;
+    int yesCAP;
+    int yesLOW;
+    int yesNUM;
+    int yesSPECIAL;
+    int yesMinLen;
+    int yesMaxLen;
+    int MinLen;
+    int MaxLen;
+
+    MinLen = 12;
+    MaxLen = 30;
+
+    i = 0;
+    yesCAP = 0;
+    yesLOW = 0;
+    yesNUM = 0;
+    yesSPECIAL = 0;
+    yesMinLen = 0;
+    yesMaxLen = 1;
+    while (c = word[i++])
+    {
+    if (c >= 'A' && c <= 'Z') { yesCAP = yesCAP + 1; }
+    else if (c >= 'a' && c <= 'z') { yesLOW = yesLOW + 1; }
+    else if (c >= '0' && c <= '9') { yesNUM = yesNUM + 1; }
+    else {yesSPECIAL = yesSPECIAL + 1;}
+    }
+    if (i > MinLen) {yesMinLen = 1;}
+    if (i >= MaxLen) {yesMaxLen = 0;}
+    if (yesCAP < 1 || yesLOW < 1 || yesNUM < 1 || yesSPECIAL < 1 || yesMinLen==0 || yesMaxLen==0) { word = 0; return;}
+}
+
+
+
+
+
+
 # This is a modified version of the 'Policy' external filter that comes with John
 # The default is to match ONLY passwords that are 8 characters exactly. This just
 # allows for any passwords OVER 8 chars. You can use this in conjunction with
