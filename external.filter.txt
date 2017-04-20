@@ -1,9 +1,58 @@
+# matches AD complexity requirements of 3 of 4 categories: number,upper,lower,special
+[List.External:Filter_AD_Complexity_Min12]
+void filter()
+{
+    int i, c ;
+    int yesCAP;
+    int yesLOW;
+    int yesNUM;
+    int yesSPECIAL;
+    int yesMinLen;
+    int yesMaxLen;
+    int MinLen;
+    int MaxLen;
+    int score;
+
+    MinLen = 12;
+    MaxLen = 30;
+
+    i = 0;
+    yesCAP = 0;
+    yesLOW = 0;
+    yesNUM = 0;
+    yesSPECIAL = 0;
+    yesMinLen = 0;
+    yesMaxLen = 1;
+    while (c = word[i++])
+    {
+    if (c >= 'A' && c <= 'Z') { yesCAP = yesCAP + 1; }
+    else if (c >= 'a' && c <= 'z') { yesLOW = yesLOW + 1; }
+    else if (c >= '0' && c <= '9') { yesNUM = yesNUM + 1; }
+    else {yesSPECIAL = yesSPECIAL + 1;}
+    }
+    if (i > MinLen) {yesMinLen = 1;}
+    if (i >= MaxLen) {yesMaxLen = 0;}
+
+    #now tally up if we have 3 of our 4 categories required
+    if (yesCAP >= 1) { score = score + 1;}
+    if (yesLOW >= 1) { score = score + 1;}
+    if (yesNUM >= 1) { score = score + 1;}
+    if (yesSPECIAL >= 1) { score = score + 1;}
+
+    if ( ( score < 3 )|| yesMinLen==0 || yesMaxLen==0) { word = 0; return;}
+
+   
+
+}
+
+
+
+
+#requires an UPPER, LOWER, SPECIAL -AND- A NUMBER
 # This is an external filter for AD complexity, with min-length set to 12. this is 
 # exactly the same as the one that comes with john except the min-length
 # Usually it isn't worth using this, but for REALLY slow hashes like kerberos tickets
 # it is faster.
-
-
 [List.External:Filter_Complex_Basic12]
 void filter()
 {
