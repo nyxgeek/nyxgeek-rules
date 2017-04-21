@@ -1,6 +1,6 @@
 
-# matches AD complexity requirements of 3 of 4 categories: number,upper,lower,special
-# min lenght 8 chars
+# matches AD complexity requirements - 3 out of 4 categories: number,upper,lower,special
+# min length 8 chars
 [List.External:Filter_AD_Complexity_Min8]
 void filter()
 {
@@ -13,7 +13,6 @@ void filter()
     int yesMaxLen;
     int MinLen;
     int MaxLen;
-    int score;
 
     MinLen = 8;
     MaxLen = 30;
@@ -41,8 +40,8 @@ void filter()
 
 }
 
-# matches AD complexity requirements of 3 of 4 categories: number,upper,lower,special
-# min lenght 12 chars
+# matches AD complexity requirements - 3 out of 4 categories: number,upper,lower,special
+# min length 12 chars
 [List.External:Filter_AD_Complexity_Min12]
 void filter()
 {
@@ -55,7 +54,6 @@ void filter()
     int yesMaxLen;
     int MinLen;
     int MaxLen;
-    int score;
 
     MinLen = 12;
     MaxLen = 30;
