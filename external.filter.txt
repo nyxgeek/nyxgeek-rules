@@ -1,4 +1,9 @@
-
+# external filter for john the ripper
+# this will stop john from generating hashes for candidate words that do not meet complexity requirements
+# however, it is only really beneficial with super slow hashes, like krb5tgs
+#
+# usage: ./john --wordlist=password.lst --rules=single --external=Filter_AD_Complexity_Min8 hashfile.hash
+#
 # matches AD complexity requirements - 3 out of 4 categories: number,upper,lower,special
 # min length 8 chars
 [List.External:Filter_AD_Complexity_Min8]
