@@ -2,6 +2,9 @@
 # this will stop john from generating hashes for candidate words that do not meet complexity requirements
 # however, it is only really beneficial with super slow hashes, like krb5tgs
 #
+# to install move this file to your john folder, and add ".include '$JOHN/external.filter.txt' to john.conf
+# 
+#
 # usage: ./john --wordlist=password.lst --rules=single --external=Filter_AD_Complexity_Min8 hashfile.hash
 #
 # 2017 @nyxgeek
