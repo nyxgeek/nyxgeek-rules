@@ -4,6 +4,10 @@
 #
 # usage: ./john --wordlist=password.lst --rules=single --external=Filter_AD_Complexity_Min8 hashfile.hash
 #
+# 2017 @nyxgeek
+
+
+
 # matches AD complexity requirements - 3 out of 4 categories: number,upper,lower,special
 # min length 8 chars
 [List.External:Filter_AD_Complexity_Min8]
