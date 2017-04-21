@@ -25,21 +25,21 @@ void filter()
     yesMaxLen = 1;
     while (c = word[i++])
     {
-    if (c >= 'A' && c <= 'Z') { yesCAP = yesCAP + 1; }
-    else if (c >= 'a' && c <= 'z') { yesLOW = yesLOW + 1; }
-    else if (c >= '0' && c <= '9') { yesNUM = yesNUM + 1; }
+    if (c >= 'A' && c <= 'Z') { yesCAP = 1; }
+    else if (c >= 'a' && c <= 'z') { yesLOW = 1; }
+    else if (c >= '0' && c <= '9') { yesNUM = 1; }
     else {yesSPECIAL = yesSPECIAL + 1;}
     }
     if (i > MinLen) {yesMinLen = 1;}
     if (i >= MaxLen) {yesMaxLen = 0;}
 
     #now tally up if we have 3 of our 4 categories required
-    if (yesCAP >= 1) { score = score + 1;}
-    if (yesLOW >= 1) { score = score + 1;}
-    if (yesNUM >= 1) { score = score + 1;}
+    if (yesCAP == 1) { score = score + 1;}
+    if (yesLOW == 1) { score = score + 1;}
+    if (yesNUM == 1) { score = score + 1;}
     if (yesSPECIAL >= 1) { score = score + 1;}
 
-    if ( ( score < 3 )|| yesMinLen==0 || yesMaxLen==0) { word = 0; return;}
+    if  ( score < 3 || yesMinLen==0 || yesMaxLen==0) { word = 0; return;}
 
    
 
