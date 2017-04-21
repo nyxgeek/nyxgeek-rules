@@ -1,6 +1,6 @@
 
 # matches AD complexity requirements of 3 of 4 categories: number,upper,lower,special
-# min lenght 12 chars
+# min lenght 8 chars
 [List.External:Filter_AD_Complexity_Min8]
 void filter()
 {
