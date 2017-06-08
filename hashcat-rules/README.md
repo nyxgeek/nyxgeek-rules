@@ -3,7 +3,7 @@ Custom rules for Hashcat
 
 USAGE NOTES
 ------------------------------------
-Simply point hashcat at the rules by using
+Simply point hashcat at the rules by using the --rules option. For example:
 
     --rules=/home/path/nyxgeek-rules/hashcat-rules/nyxgeek-i1.rule
 
