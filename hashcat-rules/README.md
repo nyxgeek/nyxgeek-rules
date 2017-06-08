@@ -1,5 +1,5 @@
 # nyxgeek-rules
-Custom rules for John the Ripper
+Custom rules for Hashcat
 
 USAGE NOTES
 ------------------------------------
