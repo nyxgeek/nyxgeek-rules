@@ -1,11 +1,12 @@
 # CLEVERBRUTE METHOD
 
-## combinator attack + custom wordlists
+### variation of cutb attack (combinator attack + custom wordlists)
 
-The CLEVERBRUTE method is simply a combinator attack with two specially-prepared wordlists. The idea is to cover likely-used keyspace, by pulling out human-generated patterns from other wordlists.  To do this, the first 1-4,1-5,and 1-6 characters of a wordlist are concatenated and sorted intoa  HEAD.out file.  The tail 1-4,1-5, and 1-6 chars of the wordlist are also compiled into a file, TAIL.out.
+The CLEVERBRUTE method is simply a combinator attack with two specially-prepared wordlists. It is an extension of the cutb attack method (https://hashcat.net/wiki/doku.php?id=hashcat_utils#cutb). The idea is to cover the likely-used keyspace, by pulling out human-generated patterns from other wordlists.  To do this, the first 1-4,1-5,and 1-6 characters of a wordlist are concatenated and sorted into a HEAD.out file.  The tail 1-4,1-5, and 1-6 chars of the wordlist are also compiled into a file, TAIL.out.
+
+#### Generating Wordlists
 
 To generate the specialized wordlists, feed the 'cleverbrute_create.sh' script a wordlist.
-
 
 ```
 example:
@@ -27,6 +28,25 @@ Spri				    !710
 Sprin				    !7102
 ```
 
+#### Attack Walkthrough
+
+These HEAD and TAIL lists are then used with wordlists like rockyou.txt.
+
+The following combinations should be run:
+
+* HEAD.out + rockyou.txt
+* rockyou.txt + TAIL.out
+* HEAD.out + TAIL.out
+* TAIL.out + HEAD.out
+* TAIL.out + rockyou.txt
+* rockyou.txt + HEAD.out
+* HEAD.out + HEAD.out
+* TAIL.out + TAIL.out
+
+
+
+
+#### Example usage:
 
 Now use these wordlists like this:
 
