@@ -18,6 +18,10 @@ Add the following lines to your john.conf file:
 
 INDEX OF RULES
 -------------------------------------
+**MakeAddress_v1** - Makes street addresses (birch -> 123birchstreet)
+
+**MakeAddress_v2** - Makes street addresses with directional (birch > 123nbirchroad)
+
 **LongDoubleAddNum** - Does duplicate of base word and appends numbers/specials (fred -> FredFred03)
 
 **MakeItBigger_Append** - Adds 4-8 of a single digit or symbol to the end of base word (fred -> Fred1111)
