@@ -1,10 +1,11 @@
 # nyxgeek-rules
 Custom rules for John the Ripper and Hashcat
 
-2017.10.31 UPDATE
+2020.05.27 UPDATE
 ------------------------------------
-Added nyxgeek-repeater-i.rule
+2020.05.27 - Added MakeAddress_v1 and MakeAddress_v2 to index list
 
+2017.10.31 - Added nyxgeek-repeater-i.rule
 
 2017.09.27 - Added a 'methodologies' folder to share methods and tricks
 
