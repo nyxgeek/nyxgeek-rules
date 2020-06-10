@@ -12,6 +12,10 @@ Simply point hashcat at the rules by using the --rules option. For example:
 
 INDEX OF RULES
 -------------------------------------
+**makeaddress_3digits.rule** - Makes address from words (e.g., birch -> 123birchstreet, 123birchst, etc)
+
+**makeaddress_4digits.rule** - Makes address from words (e.g., birch -> 1234birchstreet, 1234birchst, etc)
+
 **nyxgeek-i1.rule** - Re-creation of i1 rule from JtR - inserts chars at each positions 1-9 +/- capitalization
 
 **nyxgeek-i2.rule** - Re-creation of i2 rule from JtR - inserts chars at two positions 1-9 +/- capitalization
