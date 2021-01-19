@@ -1,5 +1,5 @@
 # nyxgeek-rules
-Custom rules for John the Ripper and Hashcat
+Password cracking rules for John the Ripper and Hashcat
 
 2020.05.27 UPDATE
 ------------------------------------
