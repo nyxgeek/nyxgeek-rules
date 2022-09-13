@@ -1,5 +1,6 @@
 # true-to-the-title rendition of T0XlC-insert_00-99_1950-2050_toprules_0_F.rule
 # 2022.09.13 @nyxgeek
+# original at https://github.com/hashcat/hashcat/tree/master/rules
 #
 # this is what the original advertises, nothing else
 # inserts 00-99 at 0-F positions
