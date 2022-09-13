@@ -2,7 +2,9 @@
 # 00-99,1950-2050 shifted from position 0 to position F
 # In memory of d3ad0ne
 
+# original at https://github.com/hashcat/hashcat/tree/master/rules
 # update 2022.09.13 @nyxgeek - the original rules did not actually insert 00-99
+# also, the original does 1930 - 2050, NOT 1950 - 2050, but this was left alone
 
 i01 i19 i23 i30
 i11 i29 i33 i40
