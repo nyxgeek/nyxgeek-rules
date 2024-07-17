@@ -24,9 +24,9 @@ echo "file written to `pwd`/HEAD.out  -  Total lines: `wc -l HEAD.out | awk '{pr
 
 
 printf "Making TAIL file...\t"
-cat $INPUTFILE | rev | cut -c1-4 >> cb-tail.tmp
-cat $INPUTFILE | rev | cut -c1-5 >> cb-tail.tmp
-cat $INPUTFILE | rev | cut -c1-6 >> cb-tail.tmp
+cat $INPUTFILE | rev | cut -c1-4 | rev >> cb-tail.tmp
+cat $INPUTFILE | rev | cut -c1-5 | rev >> cb-tail.tmp
+cat $INPUTFILE | rev | cut -c1-6 | rev >> cb-tail.tmp
 sort -u cb-tail.tmp > TAIL.out
 rm cb-tail.tmp
 
